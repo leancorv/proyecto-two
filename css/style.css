@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #141414;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    min-height: 200vh;
+}
+/* Iconos */
+i {
+    width: 20px;
+    height: 20px;
+}
+/* NAVBAR */
+
+.navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0 4%;
+    min-height: 68px;
+    align-items: center;
+    font-size: small;
+    /* background-color: blueviolet; */
+    z-index: 150; /* para que esté por encima del header(pelicula principal)*/
+}
+
+.navbar_logo {
+    display: flex;
+}
+
+.navbar_logo > img {
+    height: 50px;
+}
+
+.navbar_browse {
+    flex: 1 0 auto;
+    /* parametro 1 (agranda todo lo que quieras en la pagina) 0 (le dice que no se achique nunca de su espacio) auto (que decida que espacio va a ocupar) */
+    /* flex: <flex-grow> <flex-shrink> <flex-basis> */
+    margin-left: 32px;
+}
+
+.navbar_browse > ul {
+    list-style: none;
+}
+
+.navbar_browse > ul > li {
+    display: inline;
+    margin-left: 16px;
+}
+
+.navbar_browse > ul > li:first-child {
+    margin-left: 0;
+}
+
+.navbar_browse > ul > li:not(.navbar_browse-activo) > a:hover {
+    /* aplica a todos los li menos el activo porque ese ya esta"seleccionado" y queremos que al resto se le apliquen los efectos hover*/
+    color: gray;
+}
+
+.navbar_browse > ul > li > a {
+    text-decoration: none;
+    transition: all 200ms ease-in; /*transicion para que el hover sea mas suave */
+    color: inherit;   /*Blanco del body */
+}
+
+.navbar_browse-activo {
+    font-weight: bold;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_menu > i {
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.navbar_menu > i:last-child {
+    margin-right: 0;
+}
+
+/* NAVBAR MOBILE */
+
+.navbar_browse_mobile {
+    display: none;
+}
