@@ -96,53 +96,6 @@ i {
 }
 
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 768px) {
-    .navbar_browse {
-        display: none;
-    }
-    .navbar_browse_mobile {
-        display: block;
-        position: relative;
-        flex: 1 0 auto;
-        margin-left: 32px;
-    }
-
-    .navbar_browse_mobile_list {
-        position: absolute;
-        top: 45px;
-        /* right: 150px; */
-        display: none;
-        border-radius: 4px;
-        background-color: #141414;
-        opacity: 85%;
-    }
-    .navbar_browse_mobile_list > ul {
-        list-style: none;
-    }
-    .navbar_browse_mobile:hover > .navbar_browse_mobile_list {
-        display: block;
-    }
-    .navbar_browse_mobile_list > ul > li{
-        display: flex;
-        justify-content: center; 
-        padding: 20px 20px;
-    }
-
-    .navbar_browse_mobile p {
-        margin-left: 0;
-    }
-
-    .navbar_browse_mobile_list > ul > li:not(.navbar_browse-activo) > a:hover {
-        color: gray;
-    }
-    .navbar_browse_mobile_list > ul > li > a {
-        text-decoration: none;
-        transition: all 200ms ease-in; 
-        color: white;
-    }
-}
-
 /* HEADER SECTION (Pelicula principal) */
 
 .header {
@@ -231,4 +184,119 @@ i {
 
 .header_information_actions > button:hover {
     opacity: 0.5;
+}
+
+/* MOBILE INFORMATION ACTIONS */
+.mobile_header_information_actions {
+    display: none;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+    .navbar_browse {
+        display: none;
+    }
+    .navbar_browse_mobile {
+        display: block;
+        position: relative;
+        flex: 1 0 auto;
+        margin-left: 32px;
+    }
+
+    .navbar_browse_mobile_list {
+        position: absolute;
+        top: 45px;
+        /* right: 150px; */
+        display: none;
+        border-radius: 4px;
+        background-color: #141414;
+        opacity: 85%;
+    }
+    .navbar_browse_mobile_list > ul {
+        list-style: none;
+    }
+    .navbar_browse_mobile:hover > .navbar_browse_mobile_list {
+        display: block;
+    }
+    .navbar_browse_mobile_list > ul > li{
+        display: flex;
+        justify-content: center; 
+        padding: 20px 20px;
+    }
+
+    .navbar_browse_mobile p {
+        margin-left: 0;
+    }
+
+    .navbar_browse_mobile_list > ul > li:not(.navbar_browse-activo) > a:hover {
+        color: gray;
+    }
+    .navbar_browse_mobile_list > ul > li > a {
+        text-decoration: none;
+        transition: all 200ms ease-in; 
+        color: white;
+    }
+    /* HEADER SECTION */
+    .header_information {
+        padding-left: 24px;
+    }
+
+    .header_information_text > h1 {
+        font-size: 48px;
+        width: 90vw;
+    }
+    
+    .header_information_actions {
+        display: none;
+        /* flex-direction: column; */
+        /* align-items: 80%; */
+    }
+
+    /* .header_information_actions > button {
+        margin-left: 0;
+        margin-top: 8px;
+    } */
+
+    .mobile_header_information_actions {
+        /* si pongo display block se queda trabado como column */
+        display: flex;
+        justify-content: space-between;
+        /* padding: 0; para que esten alineados a los bordes mi lista y info (Aplicar en dispositivos menores de 600px) */
+    }
+
+    .mobile_header_information_actions > button {
+        margin-left: 0px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+        outline: 0; /* para que no aparezca el borde como pulsado*/
+        cursor: pointer;
+        padding: 4px 36px;
+        transition: opacity 400ms ease-in;
+    }
+    
+    .mobile_header_information_actions > button > i {
+        margin-right: 12px;
+        font-size: 24px;
+        line-height: 0.9;
+    }
+    
+    .mobile_header_information_actions > button:first-child {
+        margin-left: 0;
+    }
+    
+    .mobile_header_information_actions > button:nth-child(odd) {
+        background-color: transparent;
+        color: white;
+    }
+    
+    .mobile_header_information_actions > button:hover {
+        opacity: 0.5;
+    }
 }
