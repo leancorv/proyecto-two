@@ -256,6 +256,45 @@ i {
     text-transform: uppercase;
 }
 
+
+/* FOOTER SECTION */
+footer {
+    padding: 32px 48px;
+}
+
+footer > * {
+    margin-top: 32px;
+}
+
+footer > *:first-child {
+    margin-top: 0;
+}
+
+footer > .footer_socialmedia > *:not(:first-child) {
+    margin-left: 12px;
+}
+
+footer > .footer_info > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > .footer_info > ul > li {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 0;
+    flex: 1 0 25%;
+}
+
+footer > .footer_copyright {
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+}
+
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 768px) {
     .navbar_browse {
