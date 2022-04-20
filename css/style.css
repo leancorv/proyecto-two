@@ -402,4 +402,9 @@ footer > .footer_copyright {
     .mobile_header_information_actions > button:hover {
         opacity: 0.5;
     }
+    
+    /* FOOTER */
+    footer > .footer_info > ul > li {
+        flex: 1 0 50%;
+    }
 }
