@@ -11,7 +11,7 @@ body {
     background-color: #141414;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    min-height: 200vh;
+    /* min-height: 200vh; */
 }
 /* Iconos */
 i {
@@ -37,7 +37,7 @@ i {
 }
 
 .navbar_logo > img {
-    height: 50px;
+    height: 36px;
 }
 
 .navbar_browse {
@@ -77,11 +77,12 @@ i {
 
 .navbar_menu {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    font-size: 16px;
 }
 
 .navbar_menu > i {
-    margin-right: 16px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -131,6 +132,11 @@ i {
 .header_information_type {
     display: flex;
     align-items: center;
+}
+
+.header_information_type > img {
+    height: 32px;
+    width: 32px;
 }
 
 .header_information_type > h2 {
