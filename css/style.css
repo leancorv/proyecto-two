@@ -45,7 +45,7 @@ i {
     display: flex;
 }
 
-.navbar_logo > img {
+.navbar_logo > a > img {
     height: 36px;
 }
 
