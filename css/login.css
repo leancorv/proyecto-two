@@ -47,9 +47,18 @@ i {
     width: 450px; 
 }
 
-.signin h2 {
+.signin > .top {
     margin: 0 0 25px;
-    font-size: 30px;
+    height: 41px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin > .top > img { 
+    height: 41px;
+    width: 41px;
 }
 
 .signin > form > input {
