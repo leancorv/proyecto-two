@@ -36,7 +36,13 @@
             </div>
         </div>
         <div class="navbar_menu">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="navbar_menu_search">
+                <div class="search_list_container" id="searchListContainer">
+                    <ul id="searchList"></ul>
+                </div>
+                <input type="text" id="searchInput" autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon" onclick="clickSearchIcon()"></i>
+            </div>
             <i class="fa-solid fa-gift"></i>
             <i class="fa-solid fa-bell"></i>
             <i class="fa-solid fa-user"></i>

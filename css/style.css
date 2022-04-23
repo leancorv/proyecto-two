@@ -90,13 +90,55 @@ i {
     font-size: 16px;
 }
 
-.navbar_menu > i {
+.navbar_menu > * { /* de i cambiamos a * para que el margin tambien afecte a el search hecho con javascript*/
     margin-right: 20px;
     cursor: pointer;
 }
 
 .navbar_menu > i:last-child {
     margin-right: 0;
+}
+
+.navbar_menu_search {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+.navbar_menu_search > #searchInput { /* se usa el id como hijo y no directamente porque al crearse una pagina de una seccion por ejemplo  "Series" podriamos llegar a usar un id con el mismo valor y podria generar conflicto */
+    border: 1px solid #fafafa;
+    background-color: rgb(69, 69, 69);
+    padding: 4px 8px;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+    margin-right: 16px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+.search_list_container {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: rgb(71, 71, 71);
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.search_list_container > ul {
+    list-style: none;
+}
+
+.search_list_container > ul > li {
+    padding: 16px 12px;
+    border-bottom: 1px solid #fafafa;
+}
+
+.search_list_container > ul > li:last-child {
+    border-bottom: 0;
 }
 
 /* NAVBAR MOBILE */

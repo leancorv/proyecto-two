@@ -15,3 +15,6 @@ window.addEventListener('scroll', function() {
 
     // ubicacionPrincipal = ubicacionActual
 })
+
+
+
