@@ -22,7 +22,7 @@ i {
 
 /* login */
 .login-page {
-    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.445)), url(../assets2/img/backgroundlogintwo.jpg);
+    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.445)), url(../assets/img/backgroundlogintwo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
