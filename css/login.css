@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: #141414; */
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    /* min-height: 200vh;  se puso al principio para que estuviera con 200vh y se pudiera bajar un poco para visualizar bien lo que se hacia */
+}
+/* Iconos */
+i {
+    width: 20px;
+    height: 20px;
+}
+
+/* login */
+.login-page {
+    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.445)), url(../assets2/img/backgroundlogintwo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.logo {
+    width: 165px;
+    position: relative;
+    top: 25px;
+    left: 30px;
+    z-index: 100;
+}
+
+.signin {
+    background-color: #000000b4;
+    border-radius: 4px;
+    color: white;
+    margin: 40px auto 100px;
+    padding: 70px 60px 150px;
+    width: 450px; 
+}
+
+.signin h2 {
+    margin: 0 0 25px;
+    font-size: 30px;
+}
+
+.signin > form > input {
+    display: block;
+    color: white;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+}
+
+.signin > form > input[type="text"],
+.signin > form > input[type="password"] {
+    background-color: #353535;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.signin > form > input[type="text"]::-webkit-input-placeholder,
+.signin > form > input[type="password"]::-webkit-input-placeholder {
+    color: #949494;
+    font-size: 16px;
+}
+
+.signin > form > input[type="submit"] {
+    background: linear-gradient(to left,#FFBF00,#FF003C);
+    font-size: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.signin > .help {
+    color: #949494;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+/* para el recuerdame, pero igual me funciona sin eso */
+.signin > .help > .check {
+    display: flex;
+    align-items: center;
+} 
+
+.check > input {
+    width: 20px;
+    height: 20px;
+}
+/* lo de arriba tmb es para el recuerdame, para el cuadradito */
+.check > label {
+    margin-left: 5px;
+    width: 100%;
+}
+
+.help > .need > a {
+    text-decoration: none;
+    color: #949494;
+}
+
+.help > .need > a:hover{
+    text-decoration: underline;
+}
+
+.footer-signin {
+    margin-top: 30px;
+}
+
+.footer-signin > .login {
+    text-decoration: none;
+    color: #727272;
+    font-size: 13px;
+}
+
+.login > .facebook {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.footer-signin > .new {
+    margin-top: 12px;
+    font-size: 17px;
+    color: #727272;
+    font-weight: lighter;
+}
+
+.footer-signin > .new > a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.footer-signin > .new > a:hover {
+    text-decoration: underline;
+}
+
+.footer-signin > .protect {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+.footer-signin > .protect > a {
+    text-decoration: none;
+    color: #5656ff;
+}
+
+footer {
+    padding: 25px 40px 50px;
+    background-color: #000000b4;
+    margin: auto;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-info p {
+    color: gray;
+}
+
+.footer-info p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-links {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer-link_item {
+    width: 250px;
+    min-width: 200px;
+}
+
+.footer-link_item a {
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-info select {
+    background-color: black;
+    border: 1px solid rgba(128,128,128,0.446);
+    color: gray;
+    outline: none;
+    padding: 13px;
+}
+
+@media only screen and (max-width: 740px) {
+    .login-page {
+        background: #000;
+    }
+    .logo {
+        max-width: 180px;
+    }
+    .signin {
+        background: transparent;
+        margin: 0;
+        width: 100%;
+        padding: 70px 40px 90px;
+        border-bottom: 1px solid gray;
+    }
+    
+}
