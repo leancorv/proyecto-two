@@ -38,7 +38,7 @@ i {
     z-index: 100;
 }
 
-.signin {
+.login_box {
     background-color: #000000b4;
     border-radius: 4px;
     color: white;
@@ -47,7 +47,7 @@ i {
     width: 450px; 
 }
 
-.signin > .top {
+.login_box > .top {
     margin: 0 0 25px;
     height: 41px;
     font-size: 22px;
@@ -56,12 +56,12 @@ i {
     align-items: center;
 }
 
-.signin > .top > img { 
+.login_box > .top > img { 
     height: 41px;
     width: 41px;
 }
 
-.signin > form > input {
+.login_box > form > input {
     display: block;
     color: white;
     width: 100%;
@@ -70,8 +70,8 @@ i {
     border: none;
 }
 
-.signin > form > input[type="text"],
-.signin > form > input[type="password"] {
+.login_box > form > input[type="text"],
+.login_box > form > input[type="password"] {
     background-color: #353535;
     font-size: 16px;
     outline: none;
@@ -79,20 +79,20 @@ i {
     padding: 0 20px;
 }
 
-.signin > form > input[type="text"]::-webkit-input-placeholder,
-.signin > form > input[type="password"]::-webkit-input-placeholder {
+.login_box > form > input[type="text"]::-webkit-input-placeholder,
+.login_box > form > input[type="password"]::-webkit-input-placeholder {
     color: #949494;
     font-size: 16px;
 }
 
-.signin > form > input[type="submit"] {
+.login_box > form > input[type="submit"] {
     background: linear-gradient(to left,#FFBF00,#FF003C);
     font-size: 16px;
     margin-top: 40px;
     cursor: pointer;
 }
 
-.signin > .help {
+.login_box > .help {
     color: #949494;
     margin: 0;
     margin-top: 12px;
@@ -102,7 +102,7 @@ i {
     justify-content: space-between;
 }
 /* para el recuerdame, pero igual me funciona sin eso */
-.signin > .help > .check {
+.login_box > .help > .check {
     display: flex;
     align-items: center;
 } 
@@ -126,11 +126,11 @@ i {
     text-decoration: underline;
 }
 
-.footer-signin {
+.footer-login_box {
     margin-top: 30px;
 }
 
-.footer-signin > .login {
+.footer-login_box > .login {
     text-decoration: none;
     color: #727272;
     font-size: 13px;
@@ -142,30 +142,30 @@ i {
     margin-right: 10px;
 }
 
-.footer-signin > .new {
+.footer-login_box > .new {
     margin-top: 12px;
     font-size: 17px;
     color: #727272;
     font-weight: lighter;
 }
 
-.footer-signin > .new > a {
+.footer-login_box > .new > a {
     color: white;
     text-decoration: none;
     margin-left: 5px;
 }
 
-.footer-signin > .new > a:hover {
+.footer-login_box > .new > a:hover {
     text-decoration: underline;
 }
 
-.footer-signin > .protect {
+.footer-login_box > .protect {
     margin-top: 12px;
     font-size: 13px;
     color: #9b9b9b;
 }
 
-.footer-signin > .protect > a {
+.footer-login_box > .protect > a {
     text-decoration: none;
     color: #5656ff;
 }
@@ -228,7 +228,7 @@ footer a:hover {
     .logo {
         max-width: 180px;
     }
-    .signin {
+    .login_box {
         background: transparent;
         margin: 0;
         width: 100%;
