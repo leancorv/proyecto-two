@@ -1,4 +1,3 @@
-
 // EFECTO SCROLL NAVBAR
 let ubicacionPrincipal = window.pageYOffset;
 let $nav = document.querySelector('.navbar');
@@ -15,7 +14,6 @@ window.addEventListener('scroll', function() {
 
     // ubicacionPrincipal = ubicacionActual
 })
-
 
 
 // MENU SEARCH
@@ -79,3 +77,89 @@ function searchList(event) {
         }
     }
 }
+
+
+// CAROUSEL
+document.addEventListener("click", e => {
+    let flecha
+    if (e.target.matches(".flecha")) {
+        flecha = e.target
+    } else {
+        flecha = e.target.closest(".flecha")
+    }
+    if (flecha != null) onflechaClick(flecha)
+})
+
+const throttleProgressBar = throttle(() => {
+    document.querySelectorAll(".progress-bar").forEach(calculateProgressBar)
+}, 250)
+
+window.addEventListener("resize", throttleProgressBar)
+
+document.querySelectorAll(".progress-bar").forEach(calculateProgressBar)
+
+function calculateProgressBar(progressBar) {
+    progressBar.innerHTML = ""
+    const slider = progressBar.closest(".carousel").querySelector(".slider")
+    const itemCount = slider.children.length
+    const itemsPerScreen = parseInt(getComputedStyle(slider).getPropertyValue("--items-per-screen"))
+    let sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"))
+    const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen)
+    if (sliderIndex > progressBarItemCount) {
+        slider.style.setProperty("--slider-index",progressBarItemCount - 1)
+        sliderIndex = progressBarItemCount - 1
+    }
+    for (let i = 0; i < progressBarItemCount; i++) {
+        const barItem = document.createElement("div")
+        barItem.classList.add("progress-item")
+        if ( i === sliderIndex) {
+            barItem.classList.add("active")
+        }
+        progressBar.append(barItem)
+    }
+}
+
+function onflechaClick(flecha) {
+    const progressBar = flecha.closest(".carousel").querySelector(".progress-bar")
+    const slider = flecha.closest(".carousel-container").querySelector(".slider")
+    const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"))
+    const progressBarItemCount = progressBar.children.length
+    if (flecha.classList.contains("left-flecha")) {
+        if (sliderIndex - 1 < 0) {
+            slider.style.setProperty("--slider-index",progressBarItemCount - 1)
+            progressBar.children[sliderIndex].classList.remove("active")
+            progressBar.children[progressBarItemCount - 1].classList.add("active")
+        } else {
+            slider.style.setProperty("--slider-index",sliderIndex - 1)
+            progressBar.children[sliderIndex].classList.remove("active")
+            progressBar.children[sliderIndex - 1].classList.add("active")
+        }
+    }
+
+    if (flecha.classList.contains("right-flecha")) {
+        if (sliderIndex + 1 >= progressBarItemCount) {
+            slider.style.setProperty("--slider-index", 0)
+            progressBar.children[sliderIndex].classList.remove("active")
+            progressBar.children[0].classList.add("active")
+        } else {
+            slider.style.setProperty("--slider-index",sliderIndex + 1)
+            progressBar.children[sliderIndex].classList.remove("active")
+            progressBar.children[sliderIndex + 1].classList.add("active")
+        }
+    }
+}
+
+//Funcion para mejorar el rendimiento de la funcion de progress bar
+function throttle(cb, delay = 250) {
+    let shouldWait = false
+  
+    return (...args) => {
+      if (shouldWait) return
+  
+      cb(...args)
+      shouldWait = true
+      setTimeout(() => {
+        shouldWait = false
+      }, delay)
+    }
+  }
