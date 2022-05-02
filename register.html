@@ -13,29 +13,107 @@
     <link rel="shortcut icon" href="assets/img/logo/icon-logo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="register-page">
-        <header class="header">
-            <img src="assets/img/logo/logo-two-final.png" alt="logo" class="logo" draggable="false">
-            <div class="register_box">
-                <div class="top">
-                    <img src="assets/img/logo/t-complemento-alternative.png" alt="">
-                    <h2>Regístrate</h2>
-                    <img src="assets/img/logo/t-complemento.png" alt="">
+    <header class="header">
+        <img src="assets/img/logo/logo-two-final.png" alt="logo" class="logo" draggable="false">
+    </header>
+    <main class="registro-container">
+        <div class="top">
+            <img src="assets/img/logo/t-complemento-alternative.png" alt="">
+            <h2>Regístrate</h2>
+            <img src="assets/img/logo/t-complemento.png" alt="">
+        </div>
+
+        <form action="" class="formulario" id="formulario">
+            <!-- Grupo: Usuario -->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="shrek123">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                 </div>
-                <form name="form" method="post" action="">
-                    <input type="text" name="name" id="name" placeholder="Nombre" autocomplete="off">
-                    <input type="text" name="email" id="email" placeholder="Email" autocomplete="off">
-                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" autocomplete="off">
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
-                    <input type="submit" value="Regístrate">
-                </form>
-                <div class="footer-register_box">
-                    <p class="new">Ya estás registrado?<a href="login.html">Inicia sesión ahora</a></p>
-                    <p class="protect"> Esta pagina esta protegida por Google reCAPTCHA para asegurarnos de que no eres un robot. <a href="#">Leer más.</a></p>
-                </div>
+                <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener números, letras y guión bajo.</p>
             </div>
-        </header>
-        <footer class="footer">
+
+
+            <!-- Grupo: Nombre -->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Jonh Doe">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El nombre tiene que ser de 1 a 40 dígitos y solo puede contener números, letras y guión bajo.</p>
+            </div>
+
+
+            <!-- Grupo: Contraseña -->
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password" id="password">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 16 digitos</p>
+            </div>
+
+
+            <!-- Grupo: Contraseña 2 -->
+            <div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="formulario__label">Repetir contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password2" id="password2">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">Ambas contraseñas tienen que ser iguales</p>
+            </div>
+
+
+            <!-- Grupo: Correo Electrónico -->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El correo solo puede contener letras, números, puntos y guión bajo.</p>
+            </div>
+
+
+            <!-- Grupo: Teléfono -->
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="1123467890">
+                    <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El teléfono solo puede contener números y el máximo son 14 dígitos</p>
+            </div>
+
+            <!-- Grupo: Términos y Condiciones -->
+            <div class="formulario__grupo" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                    Acepto los Términos y Condicones
+                </label>
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fa-solid fa-triangle-exclamation"></i><b>Error:</b>Por favor rellena el formulario correctamente.</p>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+            </div>
+        </form>
+            
+        <div class="footer-registro-container">
+            <p class="new">Ya estás registrado?<a href="login2.html">Inicia sesión ahora</a></p>
+            <p class="protect"> Esta pagina esta protegida por Google reCAPTCHA para asegurarnos de que no eres un robot. <a href="#">Leer más.</a></p>
+        </div>
+        
+    </main>
+    <footer class="footer">
             <div class="footer-info">
                 <p> Preguntas? Llamar <a href="tel:+123123123123">+123123123123(AR)</a></p>
                 <ul class="footer-links">
@@ -51,7 +129,8 @@
                     <option value="en">English</option>
                 </select>
             </div>
-        </footer>
-    </div>
+    </footer>
+
+    <script src="js/register.js"></script>
 </body>
 </html>
