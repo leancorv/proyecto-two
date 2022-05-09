@@ -23,7 +23,7 @@
             <img src="assets/img/logo/t-complemento.png" alt="">
         </div>
 
-        <form action="" class="formulario" id="formulario">
+        <form method="POST" action="" class="formulario" id="formulario">
             <!-- Grupo: Usuario -->
             <div class="formulario__grupo" id="grupo__usuario">
                 <label for="usuario" class="formulario__label">Usuario</label>
@@ -93,7 +93,7 @@
             <div class="formulario__grupo" id="grupo__terminos">
                 <label class="formulario__label">
                     <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-                    Acepto los Términos y Condiciones
+                    Acepto los Términos y Condicones
                 </label>
             </div>
 
@@ -106,7 +106,10 @@
                 <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
             </div>
         </form>
-            
+        <?php 
+        include("php/registro_usuario_db.php");
+        ?>    
+
         <div class="footer-registro-container">
             <p class="new">Ya estás registrado?<a href="login2.html">Inicia sesión ahora</a></p>
             <p class="protect"> Esta pagina esta protegida por Google reCAPTCHA para asegurarnos de que no eres un robot. <a href="#">Leer más.</a></p>
