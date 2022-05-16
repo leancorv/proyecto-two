@@ -45,7 +45,14 @@
                 <i class="fa-solid fa-magnifying-glass" id="searchIcon" onclick="clickSearchIcon()"></i>
             </div>
             <i class="fa-solid fa-gift"></i>
-            <i class="fa-solid fa-bell"></i>
+            <div class="dropdown" id="notification-dropdown" data-dropdown>
+                <button class="link"><i class="fa-solid fa-bell" data-dropdown-button></i></button>
+                <div class="dropdown-menu information-flex">
+                    <ul class="alerts dropdown-links">
+                        <li><a href="#" class="link">No tienes notificiaciones</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="dropdown" id="user-dropdown" data-dropdown>
                 <button class="link"><img src="assets/img/perfiles/perfil-1.png" alt="" data-dropdown-button></button>
                 <div class="dropdown-menu information-flex">
