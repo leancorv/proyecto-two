@@ -227,6 +227,62 @@ i {
     display: none;
 }
 
+/* BOTTOM NAVBAR (Para small devices) */
+.bottom__nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(20,20,20,1);
+    box-shadow: 0 -1px 12px rgba(9, 9, 9, 1);
+    width: 100%;
+    /* height: 4rem; */
+    padding: 0.3rem 1rem;
+    align-content: center;
+    border-radius: 0.9rem 0.9rem 0 0;
+    transition: .4s;
+    z-index: 9999;
+}
+  
+.nav__list, 
+.nav__link {
+    display: flex;
+}
+
+.nav__link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav__list {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav__link > i {
+    font-size: 1.2rem;
+}
+
+.nav__link > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 4px;
+}
+
+.nav__name {
+    font-size: 0.8rem;
+    /* display: none;*/ /* Para diseño minimalista, esconde los nombres */
+}
+
+.active-link {
+    position: relative;
+    color: #ff7b00;
+    transition: .3s;
+}
+
 
 /* HEADER SECTION (Pelicula principal) */
 
@@ -642,5 +698,144 @@ footer > .footer_copyright {
     }
     footer > .footer_info > ul > li {
         font-size: 14px;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 481px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        border-radius: 0 0 0.8rem 0.8rem;
+    }
+    #tablet__browse-dropdown {
+        display: none;
+    }
+    .bottom__nav {
+        display: block;
+    }
+    .navbar_menu {
+        display: none;
+    }
+    .navbar_browse {
+        display: block;
+        margin-left: 0;
+    }
+    
+    .navbar_browse > ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navbar_browse > ul > li:first-child {
+        display: none;
+    }
+    
+    
+    /* HEADER */
+    .header {
+        height: 90vh;
+    }
+    .header > video {
+        height: 70%;
+    }
+
+    .header_information {
+        padding-left: 24px;
+        top: 40%;
+    }
+    .header_information > * {
+        margin-top: 1.2rem;
+    }
+    .header_information_type > img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .header_information_type > h2 {
+        font-size: 18px;
+    }
+    .header_information_text > h1 {
+        font-size: 34px;
+        width: 90vw;
+    }
+    .header_information_actions {
+        display: none;
+    }
+    .mobile_header_information_actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        width: 90vw;
+    }
+    .mobile_header_information_actions > button {
+        margin-left: 0px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bold;
+        outline: 0;
+        cursor: pointer;
+        padding: 4px 10px;
+        transition: opacity 400ms ease-in;
+    }
+
+    .mobile_header_information_actions > button > i {
+        margin-right: 12px;
+        font-size: 24px;
+        line-height: 0.9;
+    }
+    
+    .mobile_header_information_actions > button:first-child {
+        margin-left: 0;
+    }
+    
+    .mobile_header_information_actions > button:nth-child(odd) {
+        background-color: transparent;
+        color: white;
+    }
+    
+    .mobile_header_information_actions > button:hover {
+        opacity: 0.5;
+    }
+
+
+    /* MAIN */
+    main {
+        margin-top: -34vh;
+        padding-bottom: 5vh;
+    }
+    main > :first-child {
+        background: linear-gradient(to bottom, transparent 1vh, #141414 7vh);
+    }
+    :root {
+        --flecha-size: 1.5rem;
+        --img-gap: .125rem;
+    }
+    .title {
+        font-size: 1.2rem;
+    }
+    .flecha {
+        font-size: 2.5rem;
+    }
+    .progress-item {
+        flex: 0 0 1.2rem;
+        min-width: 1.2rem;
+        height: .25rem;
+      }
+    /* FOOTER */
+    footer {
+        padding: 16px 38px;
+    }
+    footer > .footer_info {
+        margin-top: 14px;
+    }
+    footer > .footer_info > ul > li {
+        flex: 1 0 50%;
+        font-size: 10px;
     }
 }
