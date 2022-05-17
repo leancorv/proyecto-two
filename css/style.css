@@ -666,11 +666,11 @@ footer > .footer_copyright {
         opacity: 0.5;
     }
     /* MAIN */
-    main {
+    .main {
         margin-top: -24vh;
         padding-bottom: 7.5vh;
     }
-    main > :first-child {
+    .main > :first-child {
         background: linear-gradient(to bottom, transparent 1vh, #141414 10vh);
     }
     :root {
@@ -805,11 +805,11 @@ footer > .footer_copyright {
 
 
     /* MAIN */
-    main {
+    .main {
         margin-top: -34vh;
         padding-bottom: 5vh;
     }
-    main > :first-child {
+    .main > :first-child {
         background: linear-gradient(to bottom, transparent 1vh, #141414 7vh);
     }
     :root {
