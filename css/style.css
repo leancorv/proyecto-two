@@ -223,7 +223,7 @@ i {
 
 /* NAVBAR MOBILE */
 
-.navbar_browse_mobile {
+#tablet__browse-dropdown {
     display: none;
 }
 
@@ -507,84 +507,74 @@ footer > .footer_copyright {
 
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+    .slider {
+        --items-per-screen: 3; 
+    }
+}
+
+@media (max-width: 481px) {
+    .slider {
+        --items-per-screen: 2; 
+    }
+}
+
+/* MEDIUM DEVICES */
+@media screen and (max-width: 992px) { 
+    /* NAVBAR */
     .navbar_browse {
         display: none;
     }
-
-    .navbar_browse_mobile {
-        display: block;
-        position: relative;
-        flex: 1 0 auto;
-        margin-left: 32px;
-    }
-
-    .navbar_browse_mobile_list {
-        position: absolute;
-        top: 45px;
-        /* right: 150px; */
-        display: none;
-        border-radius: 4px;
-        background-color: #141414;
-        opacity: 85%;
-    }
-
-    .navbar_browse_mobile_list > ul {
-        list-style: none;
-    }
-
-    .navbar_browse_mobile:hover > .navbar_browse_mobile_list {
-        display: block;
-    }
-
-    .navbar_browse_mobile_list > ul > li{
+    #tablet__browse-dropdown {
         display: flex;
-        justify-content: center; 
-        padding: 20px 20px;
+        margin-left: 32px;
+        flex: 1 0 auto;
     }
-
-    .navbar_browse_mobile p {
-        margin-left: 0;
+    #tablet__browse-menu {
+        left: -55px;
     }
-
-    .navbar_browse_mobile_list > ul > li:not(.navbar_browse-activo) > a:hover {
-        color: gray;
+    .navbar_menu_search > #searchInput {
+        padding: 0;
+        margin-right: 4px;
     }
-
-    .navbar_browse_mobile_list > ul > li > a {
-        text-decoration: none;
-        transition: all 200ms ease-in; 
-        color: white;
+    /* HEADER */
+    .header {
+        height: 95vh;
     }
-    
-    /* HEADER SECTION */
+    .header_information_text > h1 {
+        font-size: 60px;
+        width: 62vw;
+    }
     .header_information {
         padding-left: 24px;
+        top: 48%;
     }
-
-    .header_information_text > h1 {
-        font-size: 48px;
-        width: 90vw;
+    .header_information > * {
+        margin-top: 1.4rem;
+    }
+    
+    .header_information_type > img {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
+    .header_information_type > h2 {
+        font-size: 23px;
+    }
+    .header > video {
+        height: 85%;
     }
 
     .header_information_actions {
         display: none;
-        /* flex-direction: column; */
-        /* align-items: 80%; */
     }
-
-    /* .header_information_actions > button {
-        margin-left: 0;
-        margin-top: 8px;
-    } */
-
     .mobile_header_information_actions {
         /* si pongo display block se queda trabado como column */
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        padding: 0;
+        width: 90vw;
         /* padding: 0; para que esten alineados a los bordes mi lista y info (Aplicar en dispositivos menores de 600px) */
     }
-
     .mobile_header_information_actions > button {
         margin-left: 0px;
         height: 44px;
@@ -595,12 +585,12 @@ footer > .footer_copyright {
         border-radius: 4px;
         font-size: 16px;
         font-weight: bold;
-        outline: 0; /* para que no aparezca el borde como pulsado*/
+        outline: 0;
         cursor: pointer;
-        padding: 4px 36px;
+        padding: 4px 10px;
         transition: opacity 400ms ease-in;
     }
-    
+
     .mobile_header_information_actions > button > i {
         margin-right: 12px;
         font-size: 24px;
@@ -619,20 +609,38 @@ footer > .footer_copyright {
     .mobile_header_information_actions > button:hover {
         opacity: 0.5;
     }
+    /* MAIN */
+    main {
+        margin-top: -24vh;
+        padding-bottom: 7.5vh;
+    }
+    main > :first-child {
+        background: linear-gradient(to bottom, transparent 1vh, #141414 10vh);
+    }
+    :root {
+        --flecha-size: 2.25rem;
+        --img-gap: .1875rem;
+    }
+    .title {
+        font-size: 1.4rem;
+    }
+    .flecha {
+        font-size: 3.75rem;
+    }
+    .progress-item {
+        flex: 0 0 1.4rem;
+        min-width: 1.4rem;
+        height: .375rem;
+    }
 
     /* FOOTER */
+    footer {
+        padding: 24px 44px;
+    }
+    footer > .footer_info {
+        margin-top: 26px;
+    }
     footer > .footer_info > ul > li {
-        flex: 1 0 50%;
-    }
-}
-@media (max-width: 1000px) {
-    .slider {
-        --items-per-screen: 3; 
-    }
-}
-
-@media (max-width: 500px) {
-    .slider {
-        --items-per-screen: 2; 
+        font-size: 14px;
     }
 }
