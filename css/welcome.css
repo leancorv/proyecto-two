@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    z-index: 100;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 25px;
+    left: 30px;
+}
+.header a{
+    display: inline;
+    background: linear-gradient(to left,#FFBF00,#FF003C);
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+.logo {
+    width: 165px;
+}
+
+
+/* MAIN */
+.main {
+    height: 98vh;
+    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.875), rgba(0,0,0,0.685)), url(../assets/img/backgroundlogintwo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.main-child {
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+    width: 80%;
+}
+.top {
+    display: flex;
+    align-items: center;
+}
+.top > img {
+    height: 50px;
+    width: 50px;
+}
+
+.main h1 {
+    font-size: 50px;
+    min-width: 510px;
+    text-shadow: 4px 4px 4px #141414;
+}
+
+.main span {
+    font-size: 26px;
+    font-style: italic;
+    text-shadow: 3px 2px 5px #141414;
+}
+.main-buttons {
+    display: grid;
+    grid-template-columns: 36vw 18vw;
+    margin-top: 15px;
+    gap: 8px;
+}
+.main-buttons > a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+.main-buttons > a:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+.main-buttons > .btn-register {
+    padding: 20px 10px;
+    font-size: 16px;
+    background: linear-gradient(to left,#FFBF00,#FF003C);
+}
+
+.main-buttons > .btn-guest {
+    padding: 20px 10px;
+    background: linear-gradient(to right,#FFBF00,#FF003C);
+    font-size: 16px;
+}
+
+.main p {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* SECTION */
+.section {
+    background: black;
+    padding: 3rem 0;
+    border-top: 8px solid #222;
+    border-bottom: 8px solid #222;
+}
+.section h1 {
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+.section img {
+    display: block;
+    max-width: 100%;
+}
+.section p {
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+}
+
+
+.revertOrder .grid > div:first-child{
+    order: 2;
+}
+
+.revertOrder .img-tv{
+    order: 1;
+}
+/* FOOTER */
+footer {
+    margin: auto;
+    padding: 25px 40px 35px;
+    background-color: rgba(0,0,0, 0.98);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-info p {
+    color: gray;
+}
+
+.footer-info p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-links {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer-link_item {
+    width: 250px;
+    min-width: 200px;
+}
+
+.footer-link_item a {
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-info select {
+    background-color: black;
+    border: 1px solid rgba(128,128,128,0.446);
+    color: gray;
+    outline: none;
+    padding: 13px;
+}
+
+
+@media only screen and (max-width: 1222px) {
+    .logo {
+        max-width: 180px;
+    }
+    /* MAIN */
+    .main-child {
+        justify-items: center;
+        width: 70%;
+    }
+    .top {
+        display: flex;
+        align-items: center;
+    }
+    .top > img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .main h1 {
+        font-size: 40px;
+        min-width: 0;
+    }
+
+    .main span {
+        font-size: 18px;
+    }
+
+    .main-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-buttons > .btn-register {
+        font-size: 14px;
+    }
+
+    .main-buttons > .btn-guest {
+        font-size: 14px;
+    }
+
+    .main p {
+        font-size: 14px;
+    }
+
+    /* SECTION */
+    .section h1 {
+        font-size: 40px;
+    }
+    .section p {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 1130px;
+    }
+
+
+    footer {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 761px) {
+
+    /* SECTION */
+    .section h1 {
+        font-size: 30px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+
+    footer {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+
+    /* SECTION */
+    .section h1 {
+        font-size: 20px;
+    }
+    .section p {
+        font-size: 12px;
+    }
+}
