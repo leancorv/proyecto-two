@@ -43,3 +43,41 @@ Desde hace un par se semanas estoy trabajando realizar este proyecto con el stac
 - Search
 - Sistema de perfiles
 - Preloader
+
+## Fuentes y referencias
+Algunas de las principales fuentes y referencias que utilicé para desarrollar este proyecto:
+LandingPage:
+- https://www.youtube.com/watch?v=zfdNNOBfg94
+- https://www.youtube.com/watch?v=P7t13SGytRk
+
+Login y register:
+- https://www.youtube.com/watch?v=lgp1N5bcRfM
+
+Formularios:
+- https://www.youtube.com/watch?v=C_05nQZQgm8
+- https://www.youtube.com/watch?v=wfogZfIS03U
+- https://www.youtube.com/watch?v=s3pC93LgP18&t=1s
+- https://www.youtube.com/watch?v=cEKDyzoTXb4&t=2189s
+
+Pagina tipo netflix: 
+- https://www.youtube.com/watch?v=yq4BeRtUHbk
+- https://www.youtube.com/watch?v=cVvLm5Pjssk&t=4s
+- https://www.youtube.com/watch?v=75wi6pBbq-s&t=3s
+- https://www.youtube.com/watch?v=lYsNCxrHnK8
+- https://www.youtube.com/watch?v=Zl1sFIRRtpM&t=1892s
+- https://www.youtube.com/watch?v=EOviIyxctIo&t=638s
+- https://www.youtube.com/watch?v=EOviIyxctIo&t=638s
+- https://www.youtube.com/watch?v=8JN2hmaVPQc
+- https://www.youtube.com/watch?v=jsNL4l_ib48
+- https://www.youtube.com/watch?v=AOlkcLtyXkw
+
+Navbar Effect: 
+- https://www.youtube.com/watch?v=AqSWCNXi5iU&t=554s
+- https://www.youtube.com/watch?v=_N41IcElkZo 
+
+Bottom navbar: 
+- https://www.youtube.com/watch?v=DjaNof-HFyY&t=706s
+- https://www.youtube.com/watch?v=At4B7A4GOPg&t=529s
+
+Dropdown:
+- https://www.youtube.com/watch?v=S-VeYcOCFZw&t=24s&pp=ugMICgJlcxABGAE%3D
