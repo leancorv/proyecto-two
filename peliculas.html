@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3279706676.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/img/logo/icon-logo.png">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="index.html"><img src="assets/img/logo/logo-two-final.png" alt=""></a>
+        </div>
+        <div class="navbar_browse">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="series.html">Series</a></li>
+                <li class="navbar_browse-activo"><a href="peliculas.html">Películas</a></li>
+                <li><a href="novedades.html">Novedades populares</a></li>
+                <li><a href="miLista.html">Mi lista</a></li>
+            </ul>
+        </div>
+        <div class="dropdown" id="tablet__browse-dropdown" data-dropdown>
+            <button class="link"><i class="fa-solid fa-bars" data-dropdown-button></i></button>
+            <div class="dropdown-menu information-flex" id="tablet__browse-menu">
+                <ul class="browse dropdown-links">
+                    <li><a href="index.html" class="link"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                    <li><a href="peliculas.html" class="link"><i class="fa-solid fa-clapperboard"></i>Peliculas</a></li>
+                    <li><a href="series.html" class="link"><i class="fa-solid fa-tv"></i>Series</a></li>
+                    <li><a href="novedades.html" class="link"><i class="fa-solid fa-star"></i>Novedades</a></li>
+                    <li><a href="miLista.html" class="link"><i class="fa-solid fa-plus"></i>Mi lista</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar_menu">
+            <div class="navbar_menu_search">
+                <div class="search_list_container" id="searchListContainer">
+                    <ul id="searchList"></ul>
+                </div>
+                <input type="text" id="searchInput" autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchIcon" onclick="clickSearchIcon()"></i>
+            </div>
+            <i class="fa-solid fa-gift"></i>
+            <div class="dropdown" id="notification-dropdown" data-dropdown>
+                <button class="link"><i class="fa-solid fa-bell" data-dropdown-button></i></button>
+                <div class="dropdown-menu information-flex">
+                    <ul class="alerts dropdown-links">
+                        <li><a href="#" class="link">No tienes notificiaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown" id="user-dropdown" data-dropdown>
+                <button class="link"><img src="assets/img/perfiles/perfil-1.png" alt="" data-dropdown-button></button>
+                <div class="dropdown-menu information-flex">
+                    <ul class="profiles dropdown-links">
+                        <li><a href="#" class="link"><img src="assets/img/perfiles/perfil-10.png" alt="">Meme</a></li>
+                        <li><a href="#" class="link"><img src="assets/img/perfiles/perfil-12.png" alt="">Casa</a></li>
+                        <li><a href="#" class="link"><i class="fa-solid fa-pen-to-square"></i>Editar perfiles</a></li>
+                    </ul>
+                    <ul class="account-links dropdown-links" aria-label="Cuenta">
+                        <li><a href="#" class="link"><i class="fa-solid fa-user"></i>Cuenta</a></li>
+                        <li><a href="#" class="link"><i class="fa-solid fa-gear"></i>Centro de ayuda</a></li>
+                    </ul>
+                    <ul class="logout dropdown-links">
+                        <li><a href="login.html" class="link"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom__nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link active-link">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="nav__name">Inicio</span>
+                    </a>
+                </li>
+                
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="nav__name">Buscar</span>
+                    </a>
+                </li>
+    
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="fa-solid fa-download"></i>
+                        <span class="nav__name">Descargas</span>
+                    </a>
+                </li>
+    
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <img src="assets/img/perfiles/perfil-1.png" alt="" >
+                        <span class="nav__name">Mi espacio</span>
+                    </a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+    <header class="header">
+        <video src="assets/video/Your-Name.mp4" muted autoplay></video>
+        <div class="header_information">
+            <div class="header_information_type">
+                <img src="assets/img/logo/t.png" alt="">
+                <h2>Pelicula</h2>
+                <img src="assets/img/logo/t-complemento.png" alt="">
+            </div>
+            <div class="header_information_text">
+                <h1>Your Name</h1>
+                <h3>El joven Taki vive en Tokio y la joven Mitsuha, en un pequeño pueblo en las montañas. Durante el sueño, los cuerpos de ambos se intercambian. Recluidos en un cuerpo que les resulta extraño, comienzan a comunicarse</h3>
+            </div>
+            <div class="header_information_actions">
+                <button role="button"><i class="fa-solid fa-play"></i>Reproducir</button>
+                <button role="button"><i class="fa-solid fa-circle-info"></i>Más información</button>
+            </div>
+            <div class="mobile_header_information_actions">
+                <button role="button"><i class="fa-solid fa-plus"></i>Mi lista</button>
+                <button role="button"><i class="fa-solid fa-play"></i>Reproducir</button>
+                <button role="button"><i class="fa-solid fa-circle-info"></i>Info</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="carousel">
+            <div class="carousel-header">
+                <h3 class="title">Populares en two</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="carousel-container">
+                <button class="flecha left-flecha">
+                    <div class="text">&#8249;</div>
+                </button>
+                <div class="slider">
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/thetomorrowwar.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/amor-eterno.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/ejercitodelosladrones.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/si-tuviera-30.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/familia-al-instante.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/shrek.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/thebatman.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/red-notice.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/dune.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/animales-fantasticos.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/readyplayerone.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/ex-machina.jpg">
+                        </a>
+                    </div>
+                </div>
+                <button class="flecha right-flecha">
+                    <div class="text">&#8250;</div>
+                </button>
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-header">
+                <h3 class="title">Románticas</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="carousel-container">
+                <button class="flecha left-flecha">
+                    <div class="text">&#8249;</div>
+                </button>
+                <div class="slider">
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/serendipity.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/bajo-la-misma-estrella.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/love-rosie.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/propuesta-de-año-bisiesto.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/cuestion-de-tiempo.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/yo-antes-de-ti.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/yourname.webp">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/los-agentes-del-destino.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/a-cinderella-story.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/travesuras-de-una-princesa.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/si-tuviera-30.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/silverliningsplaybook.jpg">
+                        </a>
+                    </div>
+                </div>
+                <button class="flecha right-flecha">
+                    <div class="text">&#8250;</div>
+                </button>
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-header">
+                <h3 class="title">De acción</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="carousel-container">
+                <button class="flecha left-flecha">
+                    <div class="text">&#8249;</div>
+                </button>
+                <div class="slider">
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/jumanjienlaselva.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/source-code.webp">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/chappie.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/bumblebee.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/la-caida-de-la-casablanca.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/soy-leyenda.webp">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/divergent.webp">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/rapidoyfurioso.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/alita-battle-angel.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/bright.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/never-back-down.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/rush-hour-3.webp">
+                        </a>
+                    </div>
+                </div>
+                <button class="flecha right-flecha">
+                    <div class="text">&#8250;</div>
+                </button>
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-header">
+                <h3 class="title">Comedias familiares</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="carousel-container">
+                <button class="flecha left-flecha">
+                    <div class="text">&#8249;</div>
+                </button>
+                <div class="slider">
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/shrek.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/princesa-por-accidente.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/kungfupanda.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/jumanjienlaselva.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/megamente.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/juegodegemelas.jpeg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/lizziemcguire.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/blended.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/doralaexploradora.png">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/the-game-plan.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/una-esposa-de-mentira.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/mipobreangelito.jpg">
+                        </a>
+                    </div>
+                </div>
+                <button class="flecha right-flecha">
+                    <div class="text">&#8250;</div>
+                </button>
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-header">
+                <h3 class="title">Intriga y crímenes</h3>
+                <div class="progress-bar"></div>
+            </div>
+            <div class="carousel-container">
+                <button class="flecha left-flecha">
+                    <div class="text">&#8249;</div>
+                </button>
+                <div class="slider">
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/aurorateagarden.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/bright.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/culpable.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/losilusionistas.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/ejercitodelosladrones.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/el-codigo-da-vinci.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/rush-hour-3.webp">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/2guns.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/lucy.jpg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/inception.webp">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/6-underground.jpeg">
+                        </a>
+                    </div>
+                    <div class="img_item">
+                        <a href="#">
+                            <img src="assets/img/peliculas/proyecto-power.jpg">
+                        </a>
+                    </div>
+                </div>
+                <button class="flecha right-flecha">
+                    <div class="text">&#8250;</div>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_socialmedia">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+        <div class="footer_info">
+            <ul>
+                <li><a href="#">Audio y subtitulos</a></li>
+                <li><a href="#">Descripción de audio</a></li>
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Tarjetas de regalo</a></li>
+                <li><a href="#">Zonas de prensa</a></li>
+                <li><a href="#">Inversores</a></li>
+                <li><a href="#">Empleo</a></li>
+                <li><a href="#">Términos de uso</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Avisos Legales</a></li>
+                <li><a href="#">Preferencia de cookies</a></li>
+                <li><a href="#">Información coorporativa</a></li>
+                <li><a href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+        <div class="footer_copyright">
+            <p>© 2022-2022 two, Inc. { Datos sensibles}</p>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
