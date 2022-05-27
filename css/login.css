@@ -136,10 +136,11 @@ i {
     font-size: 13px;
 }
 
-.login > .facebook {
+.login > .invitado {
     width: 20px;
     vertical-align: middle;
     margin-right: 10px;
+    border-radius: 4px;
 }
 
 .footer-login_box > .new {

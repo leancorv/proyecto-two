@@ -575,12 +575,21 @@ footer > .footer_copyright {
 
 
 /* MEDIA QUERIES */
+/* EXTRA LARGE DEVICES */
+@media (min-width: 1201px) {
+    .slider {
+        --items-per-screen: 5; 
+    }
+}
+/* LARGE DEVICES ALREADY DEFINED*/
+
+/* MEDIUM DEVIDES SLIDER */
 @media (max-width: 768px) {
     .slider {
         --items-per-screen: 3; 
     }
 }
-
+/* SMALL DEVIDES SLIDER */
 @media (max-width: 481px) {
     .slider {
         --items-per-screen: 2; 
