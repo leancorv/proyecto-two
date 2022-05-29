@@ -7,7 +7,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: white;
-    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.445), rgba(0,0,0,0.300)), url(../assets/img/backgroundlogin.jpg);
+    background-image: linear-gradient(to right bottom, rgba(0,0,0,0.445), rgba(0,0,0,0.300)), url(../assets/img/backgroundlogintwo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
