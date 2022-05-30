@@ -394,7 +394,7 @@ i {
     position: relative;
     margin-top: -18vh;
     padding-bottom: 10vh;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
     /* Mozilla hide scrollbar */
     scrollbar-width: none;
@@ -435,6 +435,7 @@ i {
 
 .slider > .img_item > a > img {
     max-width: calc(100% / var(--items-per-screen));
+    height: 100%;
     aspect-ratio: 16 / 9;
     position: absolute;
     border-radius: 1rem;
